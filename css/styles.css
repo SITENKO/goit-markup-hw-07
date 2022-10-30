@@ -80,49 +80,30 @@ header {
 
 
 
-/* ------------------------------------------ */ ;
-.footer {}
+/* -----------------------TEST----------------------- */ 
 
-.container {}
+.btn-test{
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 200px;
+  cursor: pointer;
+}
 
-.footer-group {}
+/* -----------------------TEST----------------------- */
 
-.footer-address {}
+.hero-btn{
+  display: inline-block;
+  border: none;
+  
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-.logo {}
-
-.link {}
-
-.stidio-footer {}
-
-.contact {}
-
-.footer-list {}
-
-.list {}
-
-.footer-item {}
-
-.contact-address {}
-
-.footer-link {}
-
-.footer-social {}
-
-.footer-soc-title {}
-
-.footer-soc-list {}
-
-.footer-soc-item {}
-
-.footer-soc-link {}
-
-.footer-soc-icon {}
-
-.follow {}
-
-.follow-mail {}
-
-.form-btn {}
-
-.form-icon {}
+/* -----------------------TEST----------------------- */
