@@ -5,7 +5,7 @@
     gap: 30px;
 }
 
-.project-title {
+.project__title {
     color: var(--titles-text-color);
     margin-bottom: 4px;
     font-size: 18px;
@@ -13,12 +13,25 @@
     letter-spacing: 0.06em;
 }
 
-.projects-wrap {
+.projects__link {
+    display: inline-block;
+
+    transition-property: box-shadow;
+    @include animation;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.projects__wrap {
     position: relative;
     overflow: hidden;
 }
 
-.projects-top-text {
+.projects__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -32,35 +45,20 @@
     transform: translateY(101%);
 
     transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animation;
+
+    .projects__link:hover & {
+        transform: translateY(0);
+    }
 }
 
-.project-text {
+.project__text {
     font-size: 16px;
     line-height: 1.87;
     color: var(--ptimary-text-color);
 }
 
-.projects-link {
-    display: inline-block;
-
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects-link:hover .projects-top-text {
-    transform: translateY(0);
-}
-
-.projects-link:hover,
-.projects-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.projects-card {
+.projects__card {
     padding: 20px 24px;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;

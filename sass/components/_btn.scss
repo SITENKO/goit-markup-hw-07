@@ -1,48 +1,40 @@
-.hero-button:hover,
-.hero-button:focus,
-.send-btn:hover,
-.send-btn:focus,
-.form-btn:hover,
-.form-btn:focus {
-    background-color: #188ce8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
 .hero-button {
     display: inline-block;
     color: var(--secondary-text-color);
     background-color: var(--accent-color);
     min-width: 216px;
     padding: 10px 32px;
-    cursor: pointer;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
+    cursor: pointer;
     border-radius: 4px;
     border: none;
 
     transition-property: background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animation;
+    &:hover,
+    &:focus{
+        background-color: #188ce8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
-
 
 .button {
     background-color: #f5f4fa;
     padding: 6px 22px;
-    cursor: pointer;
     font-family: "Roboto";
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
+    cursor: pointer;
 
     text-align: center;
     border: none;
     border-radius: 4px;
 
     transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animation;
 }
 
 .button:hover,
@@ -62,17 +54,21 @@
     background-color: var(--accent-color);
     min-width: 200px;
     padding: 10px 28px;
-    cursor: pointer;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
+    cursor: pointer;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
 
     transition-property: background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animation;
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .modal-btn {
@@ -91,11 +87,9 @@
     cursor: pointer;
 
     transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-    fill: var(--accent-color);
+    @include animation;
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }

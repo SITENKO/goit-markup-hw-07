@@ -1,9 +1,9 @@
 @import "./base/reset";
 @import "./utils/utils";
-@import "./utils/overuse";
+@import "./utils/variables";
 
 @import "./components/container";
-@import "./layouts/btn";
+@import "./components/btn";
 
 @import "./layouts/header";
 @import "./layouts/hero";
@@ -14,5 +14,5 @@
 @import "./layouts/footer";
 @import "./layouts/portfolio";
 @import "./layouts/projects";
-@import "./components/modal-btn";
+@import "./components/modal";
 @import "./components/form";

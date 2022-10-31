@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.benefits-title {
+.benefits__title {
     color: var(--titles-text-color);
     margin-bottom: 10px;
     font-size: 14px;
@@ -10,11 +10,14 @@
     text-transform: uppercase;
 }
 
-.benefits-item {
+.benefits__item {
     width: 270px;
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
 }
 
-.benefits-card {
+.benefits__card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,11 +28,7 @@
     border-radius: 4px;
 }
 
-.benefits-item:not(:last-child) {
-    margin-right: 30px;
-}
-
-.benefits-text {
+.benefits__text {
     font-size: 14px;
     line-height: 1.71;
 }

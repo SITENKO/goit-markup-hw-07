@@ -3,7 +3,7 @@
     padding: 60px 0;
 }
 
-.footer-group {
+.footer__group {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -13,29 +13,33 @@
     color: var(--secondary-text-color);
 }
 
-.contact {
+.footer__contact {
     margin-top: 20px;
 }
 
-.contact-address {
+.footer__street {
     display: inline-block;
     color: var(--secondary-text-color);
     line-height: 1.71;
 }
 
-.footer-item:not(:last-child) {
+.footer__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.footer-link {
+.footer__link {
     color: rgba(255, 255, 255, 0.6);
     line-height: 1.71;
     transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animation;
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.footer-soc-title {
+.footer__title {
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
@@ -43,41 +47,35 @@
     margin-bottom: 20px;
 }
 
-.footer-soc-list {
+.footer__list {
     display: flex;
     gap: 10px;
 }
 
-.footer-soc-link {
-    width: 44px;
-    height: 44px;
+.footer__soc {
     color: var(--secondary-text-color);
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    @include icon__group;
+    
     transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include animation;
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
 }
 
-.footer-soc-icon {
+.footer__icon {
     fill: currentColor;
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-    background-color: var(--accent-color);
-}
-
-.follow {
+.footer__follow {
     display: flex;
     gap: 12px;
 }
 
-.follow-mail {
+.footer__mail {
     color: var(--secondary-text-color);
     width: 350px;
     height: 50px;
@@ -89,18 +87,16 @@
     border-radius: 4px;
 
     transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    @include animation;
 
-.follow-mail::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        color: rgba(255, 255, 255, 0.6);
+    }
 
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.follow-mail:focus-within {
-    border: 1px solid var(--accent-color);
-    color: var(--secondary-text-color);
+    &:focus-within {
+        border: 1px solid var(--accent-color);
+        color: var(--secondary-text-color);
+    }
 }

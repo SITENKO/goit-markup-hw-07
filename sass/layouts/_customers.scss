@@ -1,15 +1,15 @@
-.customers-list {
+.customers__list {
     display: flex;
     gap: 30px;
 }
 
-.customers-soc-item {
+.customers__soc {
     width: 106px;
     height: 60px;
     fill: currentColor;
 }
 
-.customers-link {
+.customers__link {
     width: 170px;
     height: 92px;
 
@@ -22,12 +22,11 @@
     border-radius: 4px;
 
     transition-property: border-color, color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    @include animation;
 
-.customers-link:hover,
-.customers-link:focus {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
 }
