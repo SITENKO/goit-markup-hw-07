@@ -1,18 +1,7 @@
 @import "./base/reset";
-@import "./utils/utils";
-@import "./utils/variables";
+@import "./utils/index";
 
-@import "./components/container";
-@import "./components/btn";
+@import "./components/index";
 
-@import "./layouts/header";
-@import "./layouts/hero";
-@import "./layouts/benefits";
-@import "./layouts/job";
-@import "./layouts/team";
-@import "./layouts/customers";
-@import "./layouts/footer";
-@import "./layouts/portfolio";
-@import "./layouts/projects";
-@import "./components/modal";
-@import "./components/form";
+@import "./layouts/index";
+
